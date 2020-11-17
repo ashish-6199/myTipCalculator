@@ -1,32 +1,32 @@
 <div id="container" style="width: 604px;">
-    <div id="calculator" style="float: left; width: 300px; height: 300px; border:1px solid black;">
+  <div id="calculator" style="float: left; width: 300px; height: 300px; border:1px solid black;">
 
 
-      <p>Bill
-      <p>
-        <input id="billamt" type="text" value="0.00" onblur="validNumeric(this)" onkeydown="enterSubmit()">
+    <p>Bill
+    <p>
+      <input id="billamt" type="text" value="0.00" onblur="validNumeric(this)" onkeydown="enterSubmit()">
 
-      <p>Tip %
-      <p>
-        <button type="button" onclick="minus('tipAmount')">-</button>
-        <input id="tipAmount" readonly value="10" type="text">
-        <button type="button" onclick="plus('tipAmount')">+</button>
+    <p>Tip %
+    <p>
+      <button type="button" onclick="minus('tipAmount')">-</button>
+      <input id="tipAmount" readonly value="10" type="text">
+      <button type="button" onclick="plus('tipAmount')">+</button>
 
-      <p>Number of people</p>
-      <button type="button" onclick="minus('people')">-</button>
-      <input id="people" readonly type="text" value=1>
-      <button type="button" onclick="plus('people')">+</button>
+    <p>Number of people</p>
+    <button type="button" onclick="minus('people')">-</button>
+    <input id="people" readonly type="text" value=1>
+    <button type="button" onclick="plus('people')">+</button>
 
-    </div>
-
-    <div id="result" style="float: right;width: 300px; height: 300px; border:1px solid black;">
-      <div id="totalTip">
-        <h1>Tip &nbsp; $<span id="tip">0.00</span></h1>
-      </div>
-      <div id="finalAmt">
-        <h1>Total &nbsp; $<span id="final">0.00</span></h1>
-      </div>
-    </div>
   </div>
 
-  <script type="text/javascript" src="tipCode.js"></script>
+  <div id="result" style="float: right;width: 300px; height: 300px; border:1px solid black;text-align: center;">
+    <div id="totalTip">
+      <h1>Tip &nbsp; $<span id="tip">0.00</span></h1>
+    </div>
+    <div id="finalAmt">
+      <h1>Total &nbsp; $<span id="final">0.00</span></h1>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="tipCode.js"></script>
