@@ -1,57 +1,55 @@
-function validNumeric(obj){
+function validNumeric(obj) {
     var val = obj.value;
-    if(isNaN(val))
-    obj.value = "0.00";
-  }
+    if (isNaN(val))
+        obj.value = "0.00";
+}
 
-  function enterSubmit() {
+function enterSubmit() {
     var key = window.event.key;
     if (key == "Enter") {
-      calculateTip();
+        calculateTip();
     }
-  }
+}
 
-  // Minus Tip
-  function minus(id) {
-    //debugger;
+function minus(id) {
     var obj = document.getElementById(id);
     var tipAmount = obj.value;
     if (tipAmount == "")
-      tipAmount = 0;
+        tipAmount = 0;
 
     obj.value = parseInt(tipAmount) - 1;
 
-    if (tipAmount <= 0) {
-      tipAmount = 0;
-      obj.value = tipAmount;
+    if (tipAmount <= 1) {
+        tipAmount = 1;
+        obj.value = tipAmount;
     }
 
     calculateTip();
-  }
+}
 
-  function plus(id) {
+function plus(id) {
     var obj = document.getElementById(id);
     var tipAmount = obj.value;
     if (tipAmount == "")
-      tipAmount = 0;
+        tipAmount = 0;
 
     obj.value = parseInt(tipAmount) + 1;
 
     if (obj.value > 100)
-      obj.value = 100;
+        obj.value = 100;
 
     calculateTip();
 
-  }
+}
 
-  function calculateTip() {
+function calculateTip() {
     var billAmt = document.getElementById("billamt").value;
     var tipAmount = document.getElementById("tipAmount").value;
     var numOfPeople = document.getElementById("people").value;
     var final = 0;
     if (billAmt == "" || tipAmount == 0) {
-      alert("Please enter values");
-      return;
+        alert("Please enter values");
+        return;
     }
     billAmt = parseInt(billAmt);
 
@@ -66,4 +64,4 @@ function validNumeric(obj){
     final = final.toFixed(2);
     document.getElementById("tip").innerHTML = total;
     document.getElementById("final").innerHTML = final;
-  }
+}
